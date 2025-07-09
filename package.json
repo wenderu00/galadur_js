@@ -10,14 +10,19 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@stryker-mutator/jest-runner": "^9.0.1",
+    "@stryker-mutator/typescript-checker": "^9.0.1",
     "@types/jest": "^30.0.0",
     "jest": "^30.0.4",
     "ts-jest": "^29.4.0",
     "typescript": "^5.8.3"
   },
   "jest": {
-    "preset": "ts-jest", 
-    "testEnvironment": "node", 
-    "testMatch": ["**/tests/**/*.ts", "**/?(*.)+(spec|test).ts"] 
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.ts",
+      "**/?(*.)+(spec|test).ts"
+    ]
   }
 }
