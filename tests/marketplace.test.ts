@@ -25,4 +25,10 @@ describe("Marketplace Tests", () => {
         expect(gold.quantity).toBe(initialGold - 10); // 5 * 2 = 10
         expect(stone.quantity).toBe(5); // Assuming initial stone quantity is 0
     });
+    it("should buy stone with no gold available", () => {
+        let gold = new Gold();
+        let stone = new Stone();
+        const marketplace = new Marketplace(gold, stone, new Wood(), new Food());
+        expect(() => marketplace.buyStone(5)).toThrow("no resource for exchange");
+    });
 });

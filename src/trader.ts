@@ -12,7 +12,7 @@ export class Trader extends Build {
         quantityToSell: number
     ){
         if (resourceToSell.quantity < quantityToSell) {
-            throw new Error("Not enough resource to sell");
+            throw new Error("no resource for exchange");
         }
         resourceToBuy.addQuantity(quantityToBuy);
         resourceToSell.subtractQuantity(quantityToSell);
